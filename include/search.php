@@ -62,7 +62,6 @@ function comments_search($queryarray, $andor, $limit, $offset = 0, $userid = 0)
 	// Pad the results array out to the counted length to preserve 'hits' and pagination controls.
 	// This approach is not ideal, but it greatly reduces the load for queries with large result sets
 	$commentsArray = array_pad($commentsArray, $commentsCount, 1);
-	echo count($commentsArray);
 	
 	// The number of records actually containing event objects is <= $limit, the rest are padding
 	$comments_left = ($commentsCount - ($offset + $icmsConfigSearch['search_per_page']));
